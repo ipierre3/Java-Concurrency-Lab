@@ -1,2 +1,2 @@
-# Java-Concurrency-Lab
-Tech Stack Java
+<H1> Java-Concurrency-Lab </H1>
+<p>Tech Stack: Java</p>
