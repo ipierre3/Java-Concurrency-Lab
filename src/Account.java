@@ -22,10 +22,11 @@ public class Account {
     public Account(int balance) {
         this.balance = balance;
     }
-    public void withdraw(int amount) {
+    public synchronized void withdraw(int amount) throws InterruptedException {
         String threadName = Thread.currentThread().getName();
 
         if (amount <= this.balance) {
+            Thread.sleep(50);
             this.balance -= amount;
             this.amountWithdrawn += amount;
             System.out.println(amount + " withdrawn by " + threadName + ". New balance " + this.balance + ". Total withdrawn: " + this.amountWithdrawn);
